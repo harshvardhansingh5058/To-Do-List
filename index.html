@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="main">
+        <div class="to_do">
+            <div class="heading">
+                <i class="fa-solid fa-list-check icon"></i>
+               <h1>To Do List</h1>
+               <div class="toggle_icon">
+                    <i class="fa-regular fa-sun"></i>
+               </div>
+            </div>
+            <div class="second_heading">
+               <h3>Organize your tasks, boost your productivity</h3>
+            </div>
+            <div class="create_box">
+                <div class="input">
+                    <!-- <i class="fa-solid fa-plus"></i> -->
+                    <input type="text" placeholder="Enter your task" autocomplete="off">
+                </div>
+                <div class="buttons">
+                    <!-- <button>Calendar</button> -->
+                    <button class="priority-btn">Priority</button>
+                    <button class="addtask">Add Task</button>
+                </div>
+            </div>
+            <div class="task_checker">
+                <div class="total_task">
+                    <i class="fa-solid fa-check"></i>
+                    <p>Total Task: <span id="totalCount">0</span></p>
+                </div>
+                <div class="completed">
+                    <i class="fa-solid fa-xmark"></i>
+                    <p>Completed: <span id="doneCount">0</span></p>
+                </div>
+                <div class="pending">
+                    <i class="fa-solid fa-trash"></i>
+                    <p>Pending: <span id="pendingCount">0</span></p>
+                </div>
+            </div>
+            <div class="task-list"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
