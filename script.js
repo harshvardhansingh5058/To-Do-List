@@ -22,6 +22,8 @@ addTask.addEventListener("click", () => {
         renderTask()
 
         input.value = ""
+        currentPriority = "Low"                // ← add karo
+        prioritybtn.textContent = currentPriority
         localStorage.setItem("tasks", JSON.stringify(taskData))
     } else {
         alert("Please enter a Task")
@@ -47,7 +49,7 @@ function renderTask() {
         checkbox.addEventListener("change", () => {
             task.completed = checkbox.checked  // object update karo
             updateStates()                 // counter update karo
-            localStorage.setItem("tasks", JSON.stringify(taskData))                  
+            localStorage.setItem("tasks", JSON.stringify(taskData))
         })
 
         // delete button work
@@ -69,6 +71,7 @@ function renderTask() {
             const editInput = document.createElement("input")
             editInput.value = task.text
             editInput.type = "text"
+            editInput.className = "inputEdit"
 
             // coverting span into input 
             span.replaceWith(editInput)
@@ -77,13 +80,23 @@ function renderTask() {
             // enter pr save 
             editInput.addEventListener("keydown", (e) => {
                 if (e.key === "Enter") {
+                    if (editInput.value.trim() === "") return
                     task.text = editInput.value // array update
+                    localStorage.setItem("tasks", JSON.stringify(taskData))
                     renderTask()
                 }
             })
+            editInput.addEventListener("keydown", (e) => {
+                if (e.key === "Enter") saveEdit()
+            })
+            editInput.addEventListener("blur", () => {
+                if (editInput.value.trim() === "") return
+                task.text = editInput.value.trim()
+                localStorage.setItem("tasks", JSON.stringify(taskData))
+                renderTask()
+            })
+
         })
-
-
 
         taskList.appendChild(div)
     })
@@ -106,6 +119,8 @@ const toggle = document.querySelector(".toggle_icon")
 
 toggle.addEventListener("click", () => {
     document.body.classList.toggle("dark")
+    const isDark = document.body.classList.contains("dark")
+    localStorage.setItem("darkMode", isDark)
 
     const icon = toggle.querySelector("i")
     if (document.body.classList.contains("dark")) {
@@ -113,7 +128,14 @@ toggle.addEventListener("click", () => {
     } else {
         icon.className = "fa-regular fa-sun"  // ☀️
     }
+
 })
+
+// Page load pe restore karo — script ke end mein
+if (localStorage.getItem("darkMode") === "true") {
+    document.body.classList.add("dark")
+    toggle.querySelector("i").className = "fa-solid fa-moon"
+}
 
 
 // Poori file ke end mein — ek baar chalega

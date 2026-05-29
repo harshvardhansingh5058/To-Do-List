@@ -1,138 +1,148 @@
 * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
 }
 
 /* body ka default light mode */
 body {
-    background-color: #f5f4f0;
-    color: #1a1a1a;
-    font-family: 'Segoe UI', sans-serif;
-    transition: background 0.3s, color 0.3s;
+  background-color: #f5f4f0;
+  color: #1a1a1a;
+  font-family: "Segoe UI", sans-serif;
+  transition:
+    background 0.3s,
+    color 0.3s;
 }
 
 /* jab dark class add ho to dark mode lagega */
 body.dark {
-    background-color: #141414;
-    color: #e8e4dc;
+  background-color: #141414;
+  color: #e8e4dc;
 }
 
 /* dark mode me main card */
 body.dark .to_do {
-    background-color: #1c1c1c;
-    border-color: #2a2a2a;
-    box-shadow: none;
+  background-color: #1c1c1c;
+  border-color: #2a2a2a;
+  box-shadow: none;
 }
 
 /* dark mode me input wala box */
 body.dark .create_box {
-    border-color: #252525;
-    background-color: #181818;
-    box-shadow: none;
+  border-color: #252525;
+  background-color: #181818;
+  box-shadow: none;
 }
 
 /* dark mode me input field */
 body.dark .input {
-    border-color: #2e2e2e;
-    background-color: #141414;
+  border-color: #2e2e2e;
+  background-color: #141414;
 }
 
 body.dark .input input {
-    color: #e0dbd0;
-    background-color: transparent;
+  color: #e0dbd0;
+  background-color: transparent;
 }
 
 body.dark .input input::placeholder {
-    color: #4a4a4a;
+  color: white;
 }
 
 /* dark mode me stats cards */
 body.dark .total_task,
 body.dark .completed,
 body.dark .pending {
-    border-color: #252525;
-    background-color: #181818;
-    box-shadow: none;
-    color: #9a9690;
+  border-color: #252525;
+  background-color: #181818;
+  box-shadow: none;
+  color: #9a9690;
 }
 
 body.dark .total_task span,
 body.dark .completed span,
 body.dark .pending span {
-    color: #c8c3bb;
+  color: #c8c3bb;
 }
 
 /* dark mode me normal buttons */
 body.dark button {
-    background-color: #242424;
-    color: #c0bbb3;
-    border-color: #2e2e2e;
+  background-color: #242424;
+  color: #c0bbb3;
+  border-color: #2e2e2e;
 }
 
 body.dark button:hover {
-    background-color: #2c2c2c;
+  background-color: #2c2c2c;
 }
 
 /* dark mode me add task button */
 body.dark .addtask {
-    background-color: #b5c9b5;
-    color: #1a221a;
-    border-color: #b5c9b5;
+  background-color: #b5c9b5;
+  color: #1a221a;
+  border-color: #b5c9b5;
 }
 
 body.dark .addtask:hover {
-    background-color: #a4baa4;
-    border-color: #a4baa4;
+  background-color: #a4baa4;
+  border-color: #a4baa4;
 }
 
 /* dark mode me task item */
 body.dark .task {
-    background-color: #1c1c1c;
-    border-color: #252525;
+  background-color: #1c1c1c;
+  border-color: #252525;
 }
 
 body.dark .task:hover {
-    box-shadow: none;
-    border-color: #323232;
+  box-shadow: none;
+  border-color: #323232;
 }
 
 body.dark .task span:not(.badge) {
-    color: #ccc7be;
+  color: #ccc7be;
 }
 
 body.dark .task input[type="checkbox"] {
-    accent-color: #b5c9b5;
+  accent-color: #b5c9b5;
 }
 
 /* dark mode me heading aur subtitle */
 body.dark .heading {
-    color: #e0dbd0;
+  color: #e0dbd0;
 }
 
 body.dark .second_heading {
-    color: #4a4a4a;
+  color: #4a4a4a;
 }
 
 /* dark mode me icon aur toggle button */
 body.dark .icon {
-    color: #b5c9b5;
+  color: #b5c9b5;
 }
 
 body.dark .toggle_icon {
-    color: #3e3e3e;
+  color: #3e3e3e;
 }
 
 body.dark .toggle_icon:hover {
-    color: #7a7570;
+  color: #7a7570;
 }
 
 /* dark mode me priority badges */
-body.dark .Low    { background: #1e2620; color: #7aab7a; }
-body.dark .Medium { background: #241e14; color: #b0884a; }
-body.dark .High   { background: #241616; color: #b06060; }
-
+body.dark .Low {
+  background: #1e2620;
+  color: #7aab7a;
+}
+body.dark .Medium {
+  background: #241e14;
+  color: #b0884a;
+}
+body.dark .High {
+  background: #241616;
+  color: #b06060;
+}
 
 /* ===================== */
 /* PAGE LAYOUT           */
@@ -140,71 +150,69 @@ body.dark .High   { background: #241616; color: #b06060; }
 
 /* poora page center me dikhega */
 .main {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    padding: 30px 16px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 30px 16px;
 }
 
 /* main white card */
 .to_do {
-    width: 70%;
-    height: auto;
-    background-color: #ffffff;
-    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
-    border: 1px solid #e0e0e0;
-    border-radius: 16px;
-    padding-bottom: 24px;
+  width: 70%;
+  height: auto;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding-bottom: 24px;
 }
-
 
 /* ===================== */
 /* HEADING               */
 /* ===================== */
 
 .heading {
-    gap: 10px;
-    align-items: center;
-    display: flex;
-    padding: 24px 24px 0px 24px;
-    justify-content: center;
-    font-size: 28px;
-    font-weight: bold;
-    position: relative;
+  gap: 10px;
+  align-items: center;
+  display: flex;
+  padding: 24px 24px 0px 24px;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+  position: relative;
 }
 
 /* heading ke saath wala icon */
 .icon {
-    color: purple;
+  color: purple;
 }
 
 /* dark/light toggle button (top right) */
 .toggle_icon {
-    display: flex;
-    position: absolute;
-    font-size: 20px;
-    cursor: pointer;
-    right: 5%;
-    color: #888;
-    transition: color 0.2s;
+  display: flex;
+  position: absolute;
+  font-size: 20px;
+  cursor: pointer;
+  right: 5%;
+  color: #888;
+  transition: color 0.2s;
 }
 
 .toggle_icon:hover {
-    color: #444;
+  color: #444;
 }
 
 /* heading ke neeche chhoti line */
 .second_heading {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: 400;
-    color: #888;
-    margin-top: 4px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #888;
+  margin-top: 4px;
 }
-
 
 /* ===================== */
 /* INPUT AREA            */
@@ -212,87 +220,87 @@ body.dark .High   { background: #241616; color: #b06060; }
 
 /* input aur buttons ka wrapper box */
 .create_box {
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.08);
-    padding: 16px;
-    margin: 20px auto;
-    width: 85%;
-    border-radius: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    background-color: #fafaf8;
-    border: 1px solid #ebebeb;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.08);
+  padding: 16px;
+  margin: 20px auto;
+  width: 85%;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #fafaf8;
+  border: 1px solid #ebebeb;
 }
 
 /* text input field */
 .input {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    flex: 1;
-    border: 1px solid #ddd;
-    padding: 10px 14px;
-    border-radius: 10px;
-    background-color: #ffffff;
-    transition: border-color 0.2s;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex: 1;
+  border: 1px solid #ddd;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  transition: border-color 0.2s;
 }
 
 /* focus me border purple ho jayegi */
 .input:focus-within {
-    border-color: purple;
+  border-color: purple;
 }
 
 input {
-    border: none;
-    outline: none;
-    width: 100%;
-    font-size: 14px;
-    background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  background: transparent;
 }
-
 
 /* ===================== */
 /* BUTTONS               */
 /* ===================== */
 
 .buttons {
-    display: flex;
-    gap: 8px;
+  display: flex;
+  gap: 8px;
 }
 
 /* sabhi buttons ka default style */
 button {
-    padding: 10px 16px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    background-color: #f0f0f0;
-    color: #333;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.1s;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background-color: #f0f0f0;
+  color: #333;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.1s;
 }
 
 button:hover {
-    background-color: #e4e4e4;
+  background-color: #e4e4e4;
 }
 
 button:active {
-    transform: scale(0.97);
+  transform: scale(0.97);
 }
 
 /* add task button alag dikhega */
 .addtask {
-    background-color: purple;
-    color: white;
-    border-color: purple;
+  background-color: purple;
+  color: white;
+  border-color: purple;
 }
 
 .addtask:hover {
-    background-color: #5a0080;
+  background-color: #5a0080;
 }
-
 
 /* ===================== */
 /* STATS CARDS           */
@@ -300,99 +308,130 @@ button:active {
 
 /* total / done / pending ka row */
 .task_checker {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    padding: 0 24px;
-    margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 0 24px;
+  margin-bottom: 16px;
 }
 
 /* ek ek stats card */
 .total_task,
 .completed,
 .pending {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 14px 18px;
-    border-radius: 12px;
-    font-size: 14px;
-    font-weight: 600;
-    border: 1px solid #ebebeb;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.06);
-    background-color: #fafaf8;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid #ebebeb;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.06);
+  background-color: #fafaf8;
 }
 
 /* har card ke icon ka color */
-.total_task i { color: purple; }
-.completed i  { color: #1d9e75; }
-.pending i    { color: #ba7517; }
-
+.total_task i {
+  color: purple;
+}
+.completed i {
+  color: #1d9e75;
+}
+.pending i {
+  color: #ba7517;
+}
 
 /* ===================== */
 /* TASK LIST             */
 /* ===================== */
 
 .task-list {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 24px;
+  height: 350px;
+  overflow-y: auto;
+}
+
+.task-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.task-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 10px;
 }
 
 /* ek task row */
 .task {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 14px;
-    border-radius: 10px;
-    border: 1px solid #ebebeb;
-    background-color: #fafaf8;
-    transition: box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ebebeb;
+  background-color: #fafaf8;
+  transition: box-shadow 0.2s;
 }
 
 .task:hover {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 /* checkbox styling */
 .task input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
-    accent-color: purple;
-    cursor: pointer;
-    flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  accent-color: purple;
+  cursor: pointer;
+  flex-shrink: 0;
 }
 
 /* task ka text */
 .task span:not(.badge) {
-    flex: 1;
-    font-size: 14px;
+  flex: 1;
+  font-size: 14px;
 }
-
+.inputEdit {
+  color: white;
+}
 
 /* ===================== */
 /* PRIORITY BADGES       */
 /* ===================== */
 
 .badge {
-    padding: 3px 10px;
-    border-radius: 20px;
-    font-size: 11px;
-    font-weight: 600;
-    flex-shrink: 0;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  flex-shrink: 0;
 }
 
 /* teen priority colors */
-.Low    { background: #eaf3de; color: #3b6d11; }
-.Medium { background: #faeeda; color: #854f0b; }
-.High   { background: #fcebeb; color: #a32d2d; }
+.Low {
+  background: #eaf3de;
+  color: #3b6d11;
+}
+.Medium {
+  background: #faeeda;
+  color: #854f0b;
+}
+.High {
+  background: #fcebeb;
+  color: #a32d2d;
+}
 
 /* task ke andar delete button chhota hoga */
 .task button {
-    padding: 5px 10px;
-    font-size: 12px;
-    border-radius: 8px;
-    font-weight: 500;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 8px;
+  font-weight: 500;
 }
