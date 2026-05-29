@@ -435,3 +435,179 @@ button:active {
   border-radius: 8px;
   font-weight: 500;
 }
+
+/* responsive code... */
+
+
+@media (max-width: 1024px) {
+  .to_do {
+    width: 85%;
+  }
+
+  .create_box {
+    width: 92%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 18px 10px;
+  }
+
+  .to_do {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .heading {
+    font-size: 22px;
+    padding: 18px 16px 0px 16px;
+  }
+
+  .toggle_icon {
+    right: 16px;
+    font-size: 18px;
+  }
+
+  .second_heading {
+    font-size: 12px;
+    text-align: center;
+    padding: 0px 10px;
+  }
+
+  /* input section */
+
+  .create_box {
+    width: 95%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .input {
+    width: 100%;
+    padding: 10px 12px;
+  }
+
+  input {
+    font-size: 14px;
+  }
+
+  .buttons {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+  }
+
+  .buttons button {
+    flex: 1;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  /* stats cards */
+
+  .task_checker {
+    flex-direction: column;
+    padding: 0 16px;
+    gap: 10px;
+  }
+
+  .total_task,
+  .completed,
+  .pending {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* task list */
+
+  .task-list {
+    padding: 0 16px;
+    height: 320px;
+  }
+
+  .task {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    flex-wrap: nowrap;
+  }
+
+  .task input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+  }
+
+  .task span:not(.badge) {
+    flex: 1;
+    width: auto;
+    font-size: 13px;
+    word-break: break-word;
+  }
+
+  .badge {
+    font-size: 10px;
+    padding: 3px 8px;
+    margin-left: 0;
+    white-space: nowrap;
+  }
+
+  .task button {
+    padding: 5px 8px;
+    font-size: 11px;
+    white-space: nowrap;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 20px;
+  }
+
+  .second_heading {
+    font-size: 11px;
+  }
+
+  .create_box {
+    padding: 12px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .buttons button {
+    width: 100%;
+  }
+
+  .task-list {
+    height: 280px;
+    padding: 0 12px;
+  }
+
+  .task {
+    gap: 6px;
+    padding: 8px;
+  }
+
+  .task span:not(.badge) {
+    font-size: 12px;
+  }
+
+  .badge {
+    font-size: 9px;
+    padding: 2px 6px;
+  }
+
+  .task button {
+    font-size: 10px;
+    padding: 4px 6px;
+  }
+}
